@@ -1,0 +1,145 @@
+@import 'global';
+@import 'vars';
+@import 'fonts';
+
+// Header
+
+.header {
+  margin-bottom: 100px;
+  min-height: 670px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &-mask {
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 60px;
+  }
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.logo {
+  a:hover {
+    path {
+      fill: $fill;
+      transition: all .3s;
+    }
+  }
+}
+
+.nav__links {
+  li {
+    display: inline-block;
+
+    &+li {
+      margin-left: 15px;
+    }
+  }
+
+  a {
+    text-transform: uppercase;
+    color: $text-color;
+    font-size: 12px;
+    @include m700;
+    line-height: 24px;
+
+    &:hover {
+      color: $fill;
+      transition: all .3s;
+    }
+  }
+}
+
+.header__wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 610px;
+}
+
+.header__content{
+  text-align: center;
+
+  &-title{
+    @include m700;
+    font-size: 38px;
+    line-height: 48px;
+    color: $title-color;
+    letter-spacing: 10;
+    margin-bottom: 25px;
+  }
+
+  &-text{
+    @include n400;
+    font-size: 18px;
+    line-height: 28px;
+    color: $title-color;
+    margin-bottom: 40px;
+    max-width: 620px;
+  }
+
+  &-link{
+    @include m500;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #fff;
+    padding: 23px 50px;
+    background-color: rgba($fill, .7);
+
+    &:hover{
+      background-color: rgba($fill, 1);
+      transition: all .3s;
+    }
+  }
+}
+
+// END header
+
+// About US
+
+.about{
+  margin-bottom: 100px;
+}
+
+.about__inner{
+  text-align: center;
+
+  &-title{
+    @include m700;
+    font-size: 30px;
+    line-height: 60px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    color: $title-color;
+  }
+
+  &-text{
+    @include n400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $text-color;
+    max-width: 590px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+  }
+}
+
+// END about US
+
+
+
+
+
+
+
+
+
+
+@import 'media';

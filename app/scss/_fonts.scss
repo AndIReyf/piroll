@@ -1,0 +1,14 @@
+@mixin m700 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+@mixin m500 { 
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+@mixin n400 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+}
