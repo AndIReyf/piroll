@@ -57,17 +57,17 @@
   }
 }
 
-.header__wrapper{
+.header__wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 610px;
 }
 
-.header__content{
+.header__content {
   text-align: center;
 
-  &-title{
+  &-title {
     @include m700;
     font-size: 38px;
     line-height: 48px;
@@ -76,7 +76,7 @@
     margin-bottom: 25px;
   }
 
-  &-text{
+  &-text {
     @include n400;
     font-size: 18px;
     line-height: 28px;
@@ -85,7 +85,7 @@
     max-width: 620px;
   }
 
-  &-link{
+  &-link {
     @include m500;
     text-transform: uppercase;
     font-size: 12px;
@@ -93,7 +93,7 @@
     padding: 23px 50px;
     background-color: rgba($fill, .7);
 
-    &:hover{
+    &:hover {
       background-color: rgba($fill, 1);
       transition: all .3s;
     }
@@ -104,14 +104,14 @@
 
 // About US
 
-.about{
+.about {
   margin-bottom: 100px;
 }
 
-.about__inner{
+.about__inner {
   text-align: center;
 
-  &-title{
+  &-title {
     @include m700;
     font-size: 30px;
     line-height: 60px;
@@ -120,7 +120,7 @@
     color: $title-color;
   }
 
-  &-text{
+  &-text {
     @include n400;
     font-size: 16px;
     line-height: 24px;
@@ -133,7 +133,119 @@
 
 // END about US
 
+// Skills
 
+.skills__inner {
+  display: flex;
+  justify-content: space-between;
+
+  &-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+
+    img {
+      height: 570px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
+
+.inner__content {
+  width: 500px;
+
+  &-title {
+    @include m700;
+    font-size: 30px;
+    color: $title-color;
+  }
+
+  &-name {
+    @include m700;
+    font-size: 12px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: $title-color;
+    margin-top: 40px;
+    margin-bottom: 5px;
+  }
+
+  &-dash {
+    height: 3px;
+  }
+
+  &-line {
+    max-width: 500px;
+    height: 3px;
+    background-color: #d8d8d8;
+  }
+}
+
+.skills__content {
+  background-color: $fill;
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 240px;
+  }
+}
+
+.skills__content-box {
+  color: #fff;
+  padding-left: 65px;
+  position: relative;
+
+  &.project,
+  &.hour,
+  &.feedback,
+  &.client {
+    &::before {
+      content: '\e622';
+      position: absolute;
+      font-family: 'Pe-icon-7-stroke';
+      font-size: 48px;
+      left: 0;
+    }
+  }
+
+  &.hour {
+    &::before {
+      content: '\e66b';
+    }
+  }
+
+  &.feedback {
+    &::before {
+      content: '\e611';
+    }
+  }
+
+  &.client {
+    &::before {
+      content: '\e642';
+    }
+  }
+}
+
+.box__number {
+  @include m700;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.box__name {
+  @include m500;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 30px;
+}
+
+// END Skills
 
 
 
