@@ -247,7 +247,72 @@
 
 // END Skills
 
+// Gallery
 
+.gallery__content {
+  display: flex;
+  flex-wrap: wrap;
+
+  .image-popup {
+    display: block;
+    max-width: 25%;
+    height: 300px;
+    overflow: hidden;
+    background-color: #000;
+    position: relative;
+
+    &:hover {
+      img {
+        opacity: .2;
+      }
+
+      &::before {
+        content: '\e63e';
+        position: absolute;
+        font-size: 48px;
+        font-family: 'Pe-icon-7-stroke';
+        color: #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+    }
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all .3s;
+  }
+
+  .pe-7s-look {
+    font-size: 48px;
+    color: #fff;
+  }
+}
+
+.gallery__link {
+  @include m700;
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  background-color: #f5f5f5;
+  font-size: 12px;
+  line-height: 100px;
+  text-transform: uppercase;
+  color: #8e8e8e;
+  display: block;
+  transition: all .3s;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, .3);
+    color: #000;
+  }
+}
+
+// END gallery
 
 
 
