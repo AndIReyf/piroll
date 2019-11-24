@@ -4,5 +4,8 @@ $(function () {
    type: 'image'
  });
   
+ $('.work__content-video a').fancybox({
+   
+ });
 
 });
