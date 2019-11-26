@@ -423,8 +423,159 @@
 
 // END about work
 
+// Feedback
 
+.feedback__slider {
+  background-color: $fill;
+  color: #fff;
+  @include m500;
+  text-align: center;
+  overflow: hidden;
+  padding: 150px 0 50px;
 
+  &-text {
+    font-size: 24px;
+    line-height: 36px;
+    width: 680px;
+    margin: 0 auto;
+  }
+
+  &-name {
+    margin-top: 30px;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  .slick-dots{
+    padding-top: 100px;
+
+    .slick-active{
+      button{
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    li{
+      display: inline-block;
+
+      & + li{
+        margin-left: 12px;
+      }
+
+      button{
+        background-color: #fff;
+        border: 0;
+        padding: 0 0;
+        font-size: 0;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        outline: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+// END feedback
+
+// Brand
+
+.brand__inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 200px;
+
+  &-box1,
+  &-box5 {
+    width: 89px;
+    height: 65px;
+  }
+  &-box2{
+    width: 98px;
+    height: 58px;
+  }
+  &-box3{
+    width: 127px;
+    height: 72px;
+  }
+  &-box4{
+    width: 96px;
+    height: 72px;
+  }
+}
+// End brand
+
+// Project
+
+.project{
+  background-color: $bg-color;
+  padding: 100px 0;
+}
+
+.project__inner{
+  text-align: center;
+  margin: 0 auto;
+  width: 670px;
+
+  &-title{
+    @include m700;
+    font-size: 30px;
+    line-height: 84px;
+    color: $title-color;
+  }
+
+  &-text{
+    @include n400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $text-color;
+    padding-bottom: 35px;
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  &-form{
+    .title,
+    textarea{
+      display: block;
+      width: 100%;
+      border: none;
+      padding: 20px;
+    }
+
+    textarea{
+      height: 170px;
+      resize: none;
+      margin-bottom: 30px;
+    }
+
+    input{
+      width: 320px;
+      border: none;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    input:first-child{
+      margin-right: 26px;
+    }
+
+    button{
+      @include m700;
+      font-size: 12px;
+      text-transform: uppercase;
+      background-color: $fill;
+      width: 180px;
+      height: 54px;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}
+
+// END project
 
 
 @import 'media';
