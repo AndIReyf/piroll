@@ -574,8 +574,37 @@
     }
   }
 }
-
 // END project
 
+// Footer
+
+.footer{
+  background-color: #141414;
+}
+
+.footer__inner{
+  display: flex;
+  justify-content: space-between;
+  color: $text-color;
+  padding-top: 90px;
+  padding-bottom: 80px;
+
+  a{
+    color: $text-color;
+    @include n400;
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  &-box-title{
+    @include m700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    margin-bottom: 50px;
+  }
+}
+
+// END footer
 
 @import 'media';
