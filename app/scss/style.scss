@@ -603,7 +603,7 @@
     font-size: 15px;
     line-height: 24px;
 
-    &:hover{
+    &:hover {
       color: #fff;
     }
   }
@@ -631,11 +631,13 @@
     }
   }
 }
+
 // END home header
 
-// Home content
+// Home content, About content
 
-.home-content__inner {
+.home-content__inner,
+.about-content__inner {
   padding: 70px 0 90px;
   background-color: $bg-color;
   text-align: center;
@@ -656,6 +658,7 @@
     margin: 0 auto;
   }
 }
+
 // END home content
 
 // Home gallery
@@ -665,7 +668,101 @@
     background-color: $fill;
   }
 }
+
 // END home gallery
+
+// About content
+
+.about-content__inner {
+  background-color: $bg-color-2;
+
+  &-title,
+  &-info {
+    color: #fff;
+  }
+
+}
+
+// END about content
+
+// Author
+
+.author__inner{
+  display: flex;
+  flex-wrap: wrap;
+
+  &-about{
+    width: 50%;
+
+    &.img{
+      min-height: 570px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &.content{
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      padding-left: 85px;
+      background-color: $bg-color;
+    }
+
+    &-title{
+      @include m700;
+      font-size: 30px;
+      color: $title-color;
+      margin-bottom: 20px;
+    }
+
+    &-text{
+      width: 460px;
+      @include n400;
+      font-size: 16px;
+      line-height: 24px;
+      color: $text-color;
+      margin-bottom: 25px;
+    }
+  }
+}
+// END author
+
+// Order
+
+.order__inner{
+  text-align: center;
+  padding: 80px 0 100px;
+
+  &-title{
+    @include m700;
+    font-size: 30px;
+    line-height: 84px;
+    color: $title-color;
+    margin-bottom: 10px;
+  }
+
+  &-text{
+    @include n400;
+    color: $text-color;
+    font-size: 16px;
+    line-height: 24px;
+    width: 540px;
+    margin: 0 auto 30px;
+  }
+
+  &-link {
+    @include m700;
+    font-size: 12px;
+    width: 180px;
+    padding: 20px 10px;
+    background-color: $fill;
+    text-transform: uppercase;
+    color: #fff;
+  }
+}
+// END order
 
 
 @import 'media';
