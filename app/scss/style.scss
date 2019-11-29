@@ -201,7 +201,7 @@
   padding-left: 65px;
   position: relative;
 
-  &.project,
+  &.projects,
   &.hour,
   &.feedback,
   &.client {
@@ -446,24 +446,24 @@
     text-transform: uppercase;
   }
 
-  .slick-dots{
+  .slick-dots {
     padding-top: 100px;
 
-    .slick-active{
-      button{
+    .slick-active {
+      button {
         width: 15px;
         height: 15px;
       }
     }
 
-    li{
+    li {
       display: inline-block;
 
-      & + li{
+      &+li {
         margin-left: 12px;
       }
 
-      button{
+      button {
         background-color: #fff;
         border: 0;
         padding: 0 0;
@@ -477,11 +477,12 @@
     }
   }
 }
+
 // END feedback
 
 // Brand
 
-.brand__inner{
+.brand__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -492,41 +493,45 @@
     width: 89px;
     height: 65px;
   }
-  &-box2{
+
+  &-box2 {
     width: 98px;
     height: 58px;
   }
-  &-box3{
+
+  &-box3 {
     width: 127px;
     height: 72px;
   }
-  &-box4{
+
+  &-box4 {
     width: 96px;
     height: 72px;
   }
 }
+
 // End brand
 
 // Project
 
-.project{
+.project {
   background-color: $bg-color;
   padding: 100px 0;
 }
 
-.project__inner{
+.project__inner {
   text-align: center;
   margin: 0 auto;
   width: 670px;
 
-  &-title{
+  &-title {
     @include m700;
     font-size: 30px;
     line-height: 84px;
     color: $title-color;
   }
 
-  &-text{
+  &-text {
     @include n400;
     font-size: 16px;
     line-height: 24px;
@@ -536,32 +541,34 @@
     margin: 0 auto;
   }
 
-  &-form{
+  &-form {
+
     .title,
-    textarea{
+    textarea {
       display: block;
       width: 100%;
       border: none;
       padding: 20px;
     }
 
-    textarea{
+    textarea {
       height: 170px;
       resize: none;
       margin-bottom: 30px;
     }
 
-    input{
+    input {
       width: 320px;
       border: none;
       padding: 20px;
       margin-bottom: 30px;
     }
-    input:first-child{
+
+    input:first-child {
       margin-right: 26px;
     }
 
-    button{
+    button {
       @include m700;
       font-size: 12px;
       text-transform: uppercase;
@@ -574,29 +581,34 @@
     }
   }
 }
+
 // END project
 
 // Footer
 
-.footer{
+.footer {
   background-color: #141414;
 }
 
-.footer__inner{
+.footer__inner {
   display: flex;
   justify-content: space-between;
   color: $text-color;
   padding-top: 90px;
   padding-bottom: 80px;
 
-  a{
+  a {
     color: $text-color;
     @include n400;
     font-size: 15px;
     line-height: 24px;
+
+    &:hover{
+      color: #fff;
+    }
   }
 
-  &-box-title{
+  &-box-title {
     @include m700;
     font-size: 18px;
     line-height: 24px;
@@ -606,5 +618,54 @@
 }
 
 // END footer
+
+// Home header
+
+.header {
+  &.home {
+    margin-bottom: 0;
+    min-height: auto;
+
+    a.active {
+      color: $fill;
+    }
+  }
+}
+// END home header
+
+// Home content
+
+.home-content__inner {
+  padding: 70px 0 90px;
+  background-color: $bg-color;
+  text-align: center;
+
+  &-title {
+    @include m700;
+    font-size: 38px;
+    line-height: 84px;
+    color: $title-color;
+  }
+
+  &-info {
+    @include n400;
+    font-size: 18px;
+    line-height: 28px;
+    color: $text-color;
+    max-width: 510px;
+    margin: 0 auto;
+  }
+}
+// END home content
+
+// Home gallery
+
+.gallery.home {
+  .image-popup {
+    background-color: $fill;
+  }
+}
+// END home gallery
+
 
 @import 'media';
