@@ -254,7 +254,8 @@
   display: flex;
   flex-wrap: wrap;
 
-  .image-popup {
+  .image-popup,
+  .gallery__image {
     display: block;
     max-width: 25%;
     height: 300px;
@@ -664,8 +665,14 @@
 // Home gallery
 
 .gallery.home {
-  .image-popup {
+  display: none;
+
+  .gallery__image {
     background-color: $fill;
+  }
+
+  &.active {
+    display: block;
   }
 }
 
@@ -816,14 +823,136 @@
 
 // Map
 
-.map{
+.map {
   background-color: $bg-color;
 
-  &__content{
+  &__content {
     padding-bottom: 100px;
   }
 }
+
 // END map
+
+// Single project slider
+
+.single-project {
+  display: none;
+}
+
+.single-project {
+  &.active {
+    display: block;
+  }
+}
+
+.single-project__slider {
+
+  .slick-arrow {
+    position: absolute;
+    @include m700;
+    font-size: 12px;
+    color: $title-color;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    bottom: -61px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .slick-next {
+    right: 90px;
+    padding-right: 20px;
+
+    &::after {
+      content: '\e684';
+      position: absolute;
+      font-family: 'Pe-icon-7-stroke';
+      font-size: 22px;
+      color: $title-color;
+      top: -4px;
+      right: -7px;
+    }
+  }
+
+  .slick-prev {
+    left: 90px;
+    z-index: 1;
+    padding-left: 20px;
+
+    &::before {
+      content: '\e686';
+      position: absolute;
+      font-family: 'Pe-icon-7-stroke';
+      font-size: 22px;
+      color: $title-color;
+      left: -7px;
+      top: -4px;
+    }
+  }
+
+  &-wrapper {
+    display: flex !important;
+  }
+
+  &-box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 90px;
+    background-color: $bg-color;
+
+    &.img {
+      min-height: 570px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &-title {
+      @include m700;
+      color: $title-color;
+      font-size: 38px;
+      line-height: 84px;
+    }
+
+    &-text {
+      @include n400;
+      color: $text-color;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 30px;
+      width: 445px;
+    }
+
+    &-info {
+      @include n400;
+      color: $text-color;
+      font-size: 16px;
+      line-height: 24px;
+
+      span {
+        @include m500;
+        color: $title-color;
+        padding-right: 5px;
+      }
+    }
+  }
+}
+
+.single-project__inner-dashboard {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+// END single project slider
 
 
 @import 'media';
